@@ -1,0 +1,25 @@
+From 895feccb79b1faea3101b9cee3c175f10a9f2325 Mon Sep 17 00:00:00 2001
+From: k-dominik <k-dominik@users.noreply.github.com>
+Date: Mon, 4 Jul 2022 16:23:25 +0200
+Subject: [PATCH] add install step
+
+---
+ src/CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index c9dcb7c..a254744 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -97,6 +97,8 @@ add_executable (mosaic main.cpp ${HEADER_FILES})
+ target_link_libraries (mosaic LINK_PUBLIC ${Boost_LIBRARIES})
+ target_link_libraries (mosaic LINK_PUBLIC hts)
+ 
++install(TARGETS mosaic RUNTIME DESTINATION bin)
++
+ ### Doxygen API documentation
+ find_package(Doxygen)
+ if(DOXYGEN_FOUND)
+-- 
+2.35.1
+

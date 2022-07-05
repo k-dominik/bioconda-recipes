@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/weber8thomas/mosaicatcher/archive/refs/tags/{{ version }}.tar.gz
   sha256: '{{sha256}}'
+  patches:
+    - 0000.diff
 
 build:
   number: 0
